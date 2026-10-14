@@ -19,7 +19,7 @@ fun main() {
             val (n, x) = parseInput(input)
             val result = findIntegerExponent(n, x)
             if (result != null) {
-                println("✅ Результат: $x^$result = $n")
+                println("Результат: $x^$result = $n")
                 println("Целочисленный показатель: y = $result")
             } else {
                 println("Целочисленный показатель не существует")
@@ -50,9 +50,9 @@ fun parseInput(input: String): Pair<Int, Int> {
 }
 fun findIntegerExponent(n: Int, x: Int): Int? {
     when {
-        n == 1 -> return 0  // x^0 = 1 для любого x
-        n == x -> return 1  // x^1 = x
-        n <= 0 -> return null // Для положительного x результат всегда положителен
+        n == 1 -> return 0
+        n == x -> return 1
+        n <= 0 -> return null
     }
 
     var y = 0
